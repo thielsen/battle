@@ -13,9 +13,6 @@ enable :sessions
     session[:player1] = params[:player1]
     session[:player2] = params[:player2]
     redirect '/play'
-  #  @player1 = params[:player1]
-  #  @player2 = params[:player2]
-  #  erb(:play)
   end
 
   get '/play' do
