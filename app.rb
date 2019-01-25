@@ -25,7 +25,12 @@ enable :sessions
 
   get '/attack' do
     $game.attack
+    redirect '/you-suck' if $game.lose
     erb(:attack)
+  end
+
+  get '/you-suck' do
+    erb(:lose)
   end
 
 end

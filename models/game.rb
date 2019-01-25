@@ -1,7 +1,7 @@
 require "./models/players"
 
 class Game
-  attr_reader :player1, :player2
+  attr_reader :player1, :player2, :loser
 
   def initialize(player1 = Players.new("player1"), player2 = Players.new("player2"))
    @player1 = player1
@@ -25,7 +25,7 @@ class Game
   def  show_punchbag_hp
     @punchbag.hp
   end
-  
+
   def  show_fighter_hp
     @fighter.hp
   end
@@ -40,6 +40,11 @@ class Game
       @punchbag = @player2
       @counter = nil
     end
+  end
+
+  def lose
+    @loser = @fighter.name if @fighter.hp == 0
+    @loser = @punchbag.name if @punchbag.hp == 0
   end
 
 end
