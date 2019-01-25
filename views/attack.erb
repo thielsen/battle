@@ -1,4 +1,4 @@
-<h1><%= $player1.player %> attacked <%= $player2.player %></h1>
+<h1><%= $game.name($game.player1) %> attacked <%= $game.name($game.player2)  %></h1>
 
 <form action = "/play" method="get">
   <input type="submit" value="Fight again">
