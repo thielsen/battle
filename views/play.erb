@@ -1,8 +1,9 @@
-<h1><%= $game.name($game.player1)  %> vs <%= $game.name($game.player2)  %> </h1>
+<h1><%= $game.fighter_name  %> vs <%= $game.punchbag_name  %> </h1>
 <br>
 <br>
 <br>
-<h2> <%= $game.name($game.player2) %>: <%= $game.show_hp($game.player2) %>hp </h2>
+<h2> <%= $game.fighter_name  %>: <%= $game.show_fighter_hp %>hp </h2>
+<h2> <%= $game.punchbag_name  %>: <%= $game.show_punchbag_hp %>hp </h2>
 
 
 <form action="/attack">
